@@ -1,0 +1,24 @@
+{
+    "name": "Testong",
+    "version": "0.0.0",
+    "description": "My chrome extension for testing",
+    "manifest_version": 3,
+    "minimum_chrome_version": "96",
+    "permissions": [
+      "background",
+      "storage",
+      "unlimitedStorage",
+      "tabs",
+      "declarativeNetRequest",
+      "webRequest",
+      "webRequestBlocking"
+    ],
+    "host_permissions": [
+      "*://*/*",
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
