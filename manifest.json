@@ -10,8 +10,7 @@
       "unlimitedStorage",
       "tabs",
       "declarativeNetRequest",
-      "webRequest",
-      "webRequestBlocking"
+      "webRequest"
     ],
     "host_permissions": [
       "*://*/*",

@@ -1,9 +1,18 @@
 console.log("BG started");
-const options = ["responseHeaders", "extraHeaders"]; // ['blocking', 'responseHeaders', 'extraHeaders']
+let extraInfoSpec = ["responseHeaders", "extraHeaders"];
 chrome.webRequest.onHeadersReceived.addListener(
   (details) => {
     console.log("onHeadersReceived", details);
   },
   { urls: ["*://localhost/*"] },
-  options
+  extraInfoSpec
+);
+
+extraInfoSpec = ["extraHeaders", "requestBody"];
+chrome.webRequest.onBeforeRequest.addListener(
+  (details) => {
+    console.log("onBeforeRequestOptions", details);
+  },
+  { urls: ["*://localhost/*"] },
+  extraInfoSpec
 );
